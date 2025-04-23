@@ -1,0 +1,9 @@
+# Ignorar carpetas que no quiero subir
+Tablas.rds/
+Tablas.gt/
+Plots/
+
+# Opcional: ignorar archivos por extensión
+*.rds
+*.png
+*.jpg
