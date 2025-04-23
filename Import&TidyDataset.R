@@ -2,9 +2,13 @@
 # Replace "your/dataset/folder/path" with your actual path or use setwd() interactively
 # setwd("your/dataset/folder/path")
 
+
+# packages
+library(tidyverse)
+
+
 # Import gene expression data (TPM normalized counts)
 genes <- read.delim("Data/GSE229904_norm_counts_TPM_GRCh38.p13_NCBI.tsv.gz")
-
 
 # Import phenotypic/clinical metadata
 # The first column is set as row names
@@ -12,7 +16,6 @@ feno <- read.csv("Data/GSE229904_Annotations.csv", row.names = 1)
 
 
 # Remove columns that start with the word "character"
-library(tidyverse)
 feno <- feno %>%
   dplyr::select(!starts_with("character"))
 
